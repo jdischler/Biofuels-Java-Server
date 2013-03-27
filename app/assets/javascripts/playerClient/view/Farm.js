@@ -53,8 +53,8 @@ Ext.define('Biofuels.view.Farm', {
 
         // specifies the location as the center of the icon
         // NOTE: here because relies on this.vars being fully init'd?
-        this.HEALTH_ICON_X = this.FARM_WIDTH / 2;
-        this.HEALTH_ICON_Y = this.FARM_HEIGHT - 105;
+        this.HEALTH_ICON_X = this.FARM_WIDTH - (this.HEALTH_ICON_SIZE / 2) + 10;
+        this.HEALTH_ICON_Y = (this.HEALTH_ICON_SIZE / 2) - 10;
 
         Ext.applyIf(me, {
             items: [{
@@ -381,8 +381,8 @@ Ext.define('Biofuels.view.Farm', {
     		var x = target.getX();
     		var y = target.getY();
 
-    		x -= (this.popupWindow.getWidth() * 0.5);
-    		y -= (this.popupWindow.getHeight() * 0.5);
+    		//x -= (this.popupWindow.getWidth() * 0.5);
+    		//y -= (this.popupWindow.getHeight() * 0.5);
     		this.popupWindow.setPosition(x, y);
     		this.setFieldSeason(0);
     	}
