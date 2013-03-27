@@ -52,8 +52,8 @@ Ext.define('Biofuels.view.FieldOverlay', {
 		this.fertilizerSprite = surface.add([{
 			type: 'image',
 			src: 'resources/fertilizer_yes_icon.png',
-			x: atX-10,
-			y: atY+25,
+			x: atX-15,
+			y: atY+75,
 			width: 30,
 			height: 30,
 			zIndex: 3000
@@ -62,8 +62,8 @@ Ext.define('Biofuels.view.FieldOverlay', {
 		this.tillSprite = surface.add([{
 			type: 'image',
 			src: 'resources/till_yes_icon.png',
-			x: atX-10,
-			y: atY+55,
+			x: atX+5,
+			y: atY+100,
 			width: 30,
 			height: 30,
 			zIndex: 3000
@@ -94,19 +94,18 @@ Ext.define('Biofuels.view.FieldOverlay', {
 				renderTo: surface.el.dom.parentElement.parentElement,
 				animate: true,
 				height: 135,
-				width: 160,
+				width: 182,
 				// Overlay magic starts here...float, no shadow, place at x, y, etc
 				floating: true,
 				shadow: false,
-				x: atX * 1.1124 + 5,
-				y: atY * 1.1217 + 5,
+				x: atX * 1.1124 - 8,
+				y: atY * 1.1217 + 2,
 				store: 'historyStore',
-				insetPadding: 1, 
+				insetPadding: 7, 
 				axes: [{
 						type: 'Category',
 						fields: ['year'],
 						position: 'bottom',
-						title: 'Year',
 						label: {
 							padding: 0 // only helps a bit with getting title up closer to the year #'s
 						}
